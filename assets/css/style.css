@@ -1,0 +1,55 @@
+body{
+	background:black;
+}
+.wrapper{
+	width:960px;
+	margin: 0 auto;
+}
+
+h1, h2, h3 {
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-weight: 700;
+	color: white;
+}
+header{
+	height:150px;
+	overflow:auto;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: center;
+	line-height: 200%;
+}
+header img{
+	max-width:100%;
+	max-height:100%;
+}
+/*header .row {
+	width:100%;
+	margin:0 auto;
+}*/
+.leftSide{
+	width:49%;
+	height: 400px;
+	border:3px solid white;
+
+}
+
+.left-image{
+	width:100%;
+}
+
+.rightSide{
+	border:3px solid white;
+	width:49%;
+	height: 400px;
+}
+
+.right{
+	float:right;
+}
+.left{
+	float:left;
+}
+.clearfix{
+	clear:both;
+}

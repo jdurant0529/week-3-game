@@ -1,0 +1,101 @@
+simple list of shows:
+
+game of thrones
+arrow
+Agents of SHIELD
+Greys Anatomy
+Coronation Street
+The Vampire Diaries
+The Big Bang Theory
+Supernatural
+How I Met Your Mother
+Once Upon a Time
+Criminal Minds
+The Blacklist
+The Mentalist
+The Good Wife
+NCIS
+Vikings
+Castle
+Revenge
+Bones
+Community
+Black Sails
+Modern Family
+Reign
+Person of Interest
+The Walking Dead
+The Americans
+Parks and Recreation
+White Collar
+The Following
+NCIS: Los Angeles
+Suits
+The Simpsons
+Mad Men
+The Originals
+Elementary
+Family Guy
+Scandal
+Law & Order: Special Victims Unit
+Glee
+The Tomorrow People
+Salem
+Hannibal
+CSI: Crime Scene Investigation
+Hawaii Five-O
+Sesame Street
+The Bold and the Beautiful
+Two and a Half Men
+Hart of Dixie
+Breaking Bad
+Nashville
+Pretty Little Liars
+Survivor
+Resurrection
+The Chew
+Falling Skies
+Friends
+Burn Notice
+Farscape
+Bates Motel
+Today Show
+Teen Wolf
+True Blood
+South Park
+Gossip Girl
+Orphan Black
+Sons of Anarchy
+American Horror Story
+Continuum
+CBS Evening News
+Chicago Fire
+Fargo
+Archer
+New Girl
+Da Vinci's Demons
+The X-Files
+Parenthood
+Lost
+One Tree Hill
+Veronica Mars
+Californication
+Black Box
+Spider-Man: The Animated Series
+Saturday Night Live
+House
+Psych
+Doctor Who
+Smallville
+The Young and the Restless
+CSI: Miami
+Devious Maids
+The Amazing Race
+2 Broke Girls
+Sex and the City
+House Hunters
+Gilmore Girls
+Downton Abbey
+Macgyver
+SpongBob SquarPants
+
