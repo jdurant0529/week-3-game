@@ -28,17 +28,19 @@
 
     <div class = "rightSide right">
       <div id="game">
+      <h3>
         <ul style = "list-style-type: none">
-          <li>Press any key to Start</li>
-          <li>Wins</li>
-          <li id="wins"> </li>
+          <li><br>Press any key to Start <br></li>
+          <li><br>Wins</li>
+          <li id="wins"><br></li>
           <li>Current Word</li>
-          <li id="word"></li>
+          <li id="word"><br></li>
           <li>Number of Guesses Remaining:</li>
           <li id="guessRemain"></li>
           <li>Letters already Guessed:</li>
           <li id="guessed"></li>
         </ul>
+        </h3>
       </div>  <!-- end of game -->
 
 
@@ -52,8 +54,15 @@
   </footer>  <!-- end of footer -->
   </div>  <!-- end of wrapper -->
 <script type="text/javascript">
-  var wins = 0;
-  playGame();
+
+  
+  document.onkeyup = function(event) {
+    var wins = 0;
+    var allShows = createArray();
+    var blankWord = "";
+    
+    playGame(wins, allShows, blankWord);
+  }
 </script>
 
 </body>
