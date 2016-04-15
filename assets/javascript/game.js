@@ -1,9 +1,11 @@
-function playGame(wins, allShows, blankWord) {
+function playGame() {
 	var guessesLeft = 15;
 	var guesses = 0;
-	var lettersGuessed = "";
-	
-	var userGuess = null;
+	var lettersGuessed = [];
+	var wins = 0;
+    var allShows = createArray();
+    var blankWord = [];
+	// var userGuess = null;
 	
 
 
@@ -14,36 +16,38 @@ function playGame(wins, allShows, blankWord) {
 	for (i=0; i<showName.length;i++){
 
 		if (showName[i] == " "){
-			blankWord += "       ";
+			blankWord.push(" ");
 		}
 		else {
-			blankWord += "__ ";
+			blankWord.push("_");
 		}
 	}
 
 	document.getElementById("wins").innerHTML = wins;
 	document.getElementById("guessRemain").innerHTML = guessesLeft;
-	document.getElementById("word").innerHTML = blankWord;  
+	document.getElementById("word").innerHTML = blankWord.join(" ");
 	document.getElementById("guessed").innerHTML = lettersGuessed;
-	console.log(blankWord);
+
 	
 	document.onkeyup = function(event) {
 
 		var userGuess = String.fromCharCode(event.keyCode).toUpperCase();
+		userGuess.indexOf(lettersGuessed);
+
 		if (showName.indexOf(userGuess) >=0 ) {
 		  for (i=0; i<showName.length;i++){
 		  	if (showName[i] == userGuess){
 		  		console.log(userGuess + "in SHOWNAME");
+		  		blankWord[i] = userGuess;
 		  	}
-
 		  }
 		}
 		else if (lettersGuessed.indexOf(userGuess)) {
 			console.log("already guessed" + userGuess);
-			
+			console.log(lettersGuessed);
 		}
 		else{
-		  lettersGuessed += userGuess;
+		  lettersGuessed.push(userGuess);
 		  guesses+=1;
 		  guessesLeft -= 1;
 		  // console.log(guesses);
@@ -51,7 +55,7 @@ function playGame(wins, allShows, blankWord) {
 
 		document.getElementById("wins").innerHTML = wins +"<br>";
 		document.getElementById("guessRemain").innerHTML = guessesLeft +"<br>";
-		document.getElementById("word").innerHTML = blankWord +"<br>";  
+		document.getElementById("word").innerHTML = blankWord.join(" ") +"<br>";  
 		document.getElementById("guessed").innerHTML = lettersGuessed;
 		// console.log(userGuess);
 
