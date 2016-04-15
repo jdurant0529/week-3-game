@@ -1,7 +1,7 @@
 simple list of shows:
 
-game of thrones
-arrow
+Game of Thrones
+Arrow
 Agents of SHIELD
 Greys Anatomy
 Coronation Street

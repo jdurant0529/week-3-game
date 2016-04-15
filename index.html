@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Hangman: Television Edition</title>
-  <script type="text/javascript" src="javascript/game.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -12,23 +12,36 @@
   <div class="wrapper">
 
   <header>
-    <div>
+    <div> <!-- set up single header row with 3 columns -->
       <div class="col-sm-4"><img src="assets/images/tv-header2.jpg" alt = "TV"> 
-      </div>
-      <div class="col-sm-4"><h1><p>Hangman:</p><p> Television Edition</p></h1></div>
-      <div class="col-sm-4"><img src="assets/images/tv-header2.jpg" alt = "TV">
+      </div>  <!-- column 1 -->
+      <div class="col-sm-4"><h1><p>Hangman:</p><p> Television Edition</p></h1></div><!-- column 2 -->
+      <div class="col-sm-4"><img src="assets/images/tv-header2.jpg" alt = "TV"><!-- column 3 -->
       </div>
     </div> <!-- end row -->
   </header>  <!-- end of header -->
 
   <div class="mainContent">
-    
     <div class ="leftSide left">
       <img src="assets/images/showIMG/television.jpg" alt = "Television" class = "left-image">
     </div>  <!-- end of leftSide -->
 
     <div class = "rightSide right">
-      
+      <div id="game">
+        <ul style = "list-style-type: none">
+          <li>Press any key to Start</li>
+          <li>Wins</li>
+          <li id="wins"> </li>
+          <li>Current Word</li>
+          <li id="word"></li>
+          <li>Number of Guesses Remaining:</li>
+          <li id="guessRemain"></li>
+          <li>Letters already Guessed:</li>
+          <li id="guessed"></li>
+        </ul>
+      </div>  <!-- end of game -->
+
+
 
     </div>  <!-- end of rightSide -->
 
@@ -38,5 +51,11 @@
     <h5>Copyright 2016 - James Durant</h5>
   </footer>  <!-- end of footer -->
   </div>  <!-- end of wrapper -->
+<script type="text/javascript">
+  var wins = 0;
+  playGame();
+</script>
+
 </body>
 </html>
+

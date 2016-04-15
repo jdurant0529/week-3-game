@@ -23,15 +23,16 @@ header img{
 	max-width:100%;
 	max-height:100%;
 }
-/*header .row {
+footer{
 	width:100%;
-	margin:0 auto;
-}*/
+	text-align: center;
+	clear: both;
+}
 .leftSide{
+	border:3px solid white;
 	width:49%;
 	height: 400px;
-	border:3px solid white;
-
+	color:white;
 }
 
 .left-image{
@@ -42,6 +43,12 @@ header img{
 	border:3px solid white;
 	width:49%;
 	height: 400px;
+	color:white;
+	text-align: center;
+}
+
+.game{
+	color:white;
 }
 
 .right{
