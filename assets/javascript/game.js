@@ -2,7 +2,7 @@ function playGame() {
 	var guessesLeft = 15;
 	var guesses = 0;
 	var lettersGuessed = [];
-	var wins = 0;
+	// var wins = 0;
     var allShows = createArray();
     var blankWord = [];
 	// var userGuess = null;
@@ -29,7 +29,7 @@ function playGame() {
 		}
 	}
 
-	document.getElementById("wins").innerHTML = wins;
+	document.getElementById("wins").innerHTML = wins + "<br>";
 	document.getElementById("guessRemain").innerHTML = guessesLeft;
 	document.getElementById("word").innerHTML = blankWord.join(" ");
 	document.getElementById("guessed").innerHTML = lettersGuessed;
@@ -67,18 +67,21 @@ function playGame() {
 
 	  	if (guessesLeft <= 0) {
 	  		alert("You Lost");
+	  		playGame();
 		}
 		//console.log(showName, blankWord.join(''));
 		if (blankWord.join('') == showName) {
 			alert("Congrats, you win");
 			wins += 1;
+			playGame();
+			// Change image to showname??
 		}
 	}
 }
 function createArray() {
 
 	var listOfShows = ['Spider-Man: The Animated Series',];
-	
+
 	// 'Game of Thrones',
 	// 'Arrow',
 	// 'Agents of SHIELD',

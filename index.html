@@ -23,7 +23,7 @@
 
   <div class="mainContent">
     <div class ="leftSide left">
-      <img src="assets/images/showIMG/television.jpg" alt = "Television" class = "left-image">
+      <img id = "TV" src="assets/images/showIMG/television.jpg" alt = "Television" class = "left-image">
     </div>  <!-- end of leftSide -->
 
     <div class = "rightSide right">
@@ -33,10 +33,10 @@
           <li><br>Press any key to Start <br></li>
           <li><br>Wins</li>
           <li id="wins"><br></li>
-          <li>Current Word</li>
+          <li>Current Word<br></li>
           <li id="word"><br></li>
           <li>Number of Guesses Remaining:</li>
-          <li id="guessRemain"></li>
+          <li id="guessRemain"><br></li>
           <li>Letters already Guessed:</li>
           <li id="guessed"></li>
         </ul>
@@ -57,7 +57,7 @@
 
   
   document.onkeyup = function(event) {
-    
+     wins=0;
     
     playGame();
   }
