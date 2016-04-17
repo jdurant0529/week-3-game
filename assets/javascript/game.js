@@ -6,7 +6,7 @@
   }
 
 function playGame() {
-	var guessesLeft = 15;
+	var guessesLeft = 10;
 	var guesses = 0;
 	var lettersGuessed = [];
 	// var wins = 0;
