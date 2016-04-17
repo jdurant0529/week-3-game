@@ -56,22 +56,22 @@ function playGame() {
 		
 		var userGuess = String.fromCharCode(event.keyCode).toUpperCase();
 		 // userGuess.indexOf(lettersGuessed);
-		 console.log(event.keyCode);
-		if (showName.indexOf(userGuess) >=0 ) {
+		console.log(event.keyCode);
+		if (event.keyCode < 65 || event.keyCode > 90  ) {
+			console.log("invalid character");
+    		}
+
+		else if (showName.indexOf(userGuess) >=0 ) {
 		  for (i=0; i<showName.length;i++){
 		  	if (showName[i] == userGuess){
 		  		blankWord[i] = userGuess;
 		  		compareWord[i] = userGuess;
-		  		
-		  	}
-		  }
-		}
+		  	} // end if inside for
+		  }  // end for loop
+		} //end else if 
 		else if (lettersGuessed.indexOf(userGuess) >=0) {
 			console.log("already guessed");
 		}
-		else if (event.keyCode < 65 || event.keyCode > 90) {
-			console.log("invalid character");
-    		}
 		else{
 		  lettersGuessed.push(userGuess);
 		  guesses+=1;
@@ -88,18 +88,21 @@ function playGame() {
 		// console.log(userGuess);
 
 	  	if (guessesLeft <= 0) {
-	  		// alert("You Lost");
-	  		playGame();
+	  		alert("You Lost");
+	  		document.onkeyup = function(event) {
+				playGame();
+			}
 		}
-		//console.log(showName, blankWord.join(''));
+
 		if (compareWord.join('') == showName) {
-			// alert("Congrats, you win");
+			
 			wins += 1;
 			var audio = new Audio('assets/game-win.mp3');
 		  	audio.play();
 			document.getElementById("TV").src="assets/images/showIMG/" +  showSource;
-			playGame();
-			// Change image to showname??
+			document.onkeyup = function(event) {
+				playGame();
+			}
 		}
 	}
 }
