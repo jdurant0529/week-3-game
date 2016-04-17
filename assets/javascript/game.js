@@ -12,6 +12,7 @@ function playGame() {
 	// var wins = 0;
     var allShows = createArray();
     var blankWord = [];
+    var compareWord = [];
     var userGuess = " "
 
 	// var userGuess = null;
@@ -28,16 +29,20 @@ function playGame() {
 
 		if (showName[i] == " "){
 			blankWord.push('&nbsp');
+			compareWord.push(" ");
 
 		}
 		else if(showName[i] == ":"){
 			blankWord.push(":");
+			compareWord.push(":");
 		}
 		else if(showName[i] == "-"){
 			blankWord.push("-");
+			compareWord.push("-");
 		}
 		else {
 			blankWord.push("_");
+			compareWord.push("_");
 		}
 	}
 
@@ -57,6 +62,7 @@ function playGame() {
 		  	if (showName[i] == userGuess){
 		  		// console.log(userGuess + "in SHOWNAME");
 		  		blankWord[i] = userGuess;
+		  		compareWord[i] = userGuess;
 		  	}
 		  }
 		}
@@ -82,7 +88,7 @@ function playGame() {
 	  		playGame();
 		}
 		//console.log(showName, blankWord.join(''));
-		if (blankWord.join('') == showName) {
+		if (compareWord.join('') == showName) {
 			alert("Congrats, you win");
 			wins += 1;
 			document.getElementById("TV").src="assets/images/showIMG/" +  showSource;
