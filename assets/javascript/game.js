@@ -55,12 +55,11 @@ function playGame() {
 	document.onkeyup = function(event) {
 		
 		var userGuess = String.fromCharCode(event.keyCode).toUpperCase();
-		userGuess.indexOf(lettersGuessed);
-
+		 // userGuess.indexOf(lettersGuessed);
+		 console.log(event.keyCode);
 		if (showName.indexOf(userGuess) >=0 ) {
 		  for (i=0; i<showName.length;i++){
 		  	if (showName[i] == userGuess){
-		  		// console.log(userGuess + "in SHOWNAME");
 		  		blankWord[i] = userGuess;
 		  		compareWord[i] = userGuess;
 		  		
@@ -68,9 +67,11 @@ function playGame() {
 		  }
 		}
 		else if (lettersGuessed.indexOf(userGuess) >=0) {
-			// console.log("already guessed: " + userGuess);
-			// console.log(lettersGuessed);
+			console.log("already guessed");
 		}
+		else if (event.keyCode < 65 || event.keyCode > 90) {
+			console.log("invalid character");
+    		}
 		else{
 		  lettersGuessed.push(userGuess);
 		  guesses+=1;
