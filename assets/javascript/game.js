@@ -53,7 +53,7 @@ function playGame() {
 
 	
 	document.onkeyup = function(event) {
-
+		
 		var userGuess = String.fromCharCode(event.keyCode).toUpperCase();
 		userGuess.indexOf(lettersGuessed);
 
@@ -63,6 +63,7 @@ function playGame() {
 		  		// console.log(userGuess + "in SHOWNAME");
 		  		blankWord[i] = userGuess;
 		  		compareWord[i] = userGuess;
+		  		
 		  	}
 		  }
 		}
@@ -74,6 +75,8 @@ function playGame() {
 		  lettersGuessed.push(userGuess);
 		  guesses+=1;
 		  guessesLeft -= 1;
+		  var audio = new Audio('assets/channel-change.wav');
+		  audio.play();
 		  // console.log(guesses);
 		}
 
@@ -84,13 +87,15 @@ function playGame() {
 		// console.log(userGuess);
 
 	  	if (guessesLeft <= 0) {
-	  		alert("You Lost");
+	  		// alert("You Lost");
 	  		playGame();
 		}
 		//console.log(showName, blankWord.join(''));
 		if (compareWord.join('') == showName) {
-			alert("Congrats, you win");
+			// alert("Congrats, you win");
 			wins += 1;
+			var audio = new Audio('assets/game-win.mp3');
+		  	audio.play();
 			document.getElementById("TV").src="assets/images/showIMG/" +  showSource;
 			playGame();
 			// Change image to showname??
@@ -148,7 +153,7 @@ function createArray() {
 		{show: "Friends", source: "friends.jpg"},
 		{show: "Burn Notice", source: "burn-notice.jpg"},
 		{show: "Today Show", source: "today-show.jpg"},
-		{show: "True Blood", source: "ture-blood.jpg"},
+		{show: "True Blood", source: "true-blood.jpg"},
 		{show: "South Park", source: "south-park.jpg"},
 		{show: "Sons of Anarchy", source: "sons-of-anarchy.jpg"},
 		{show: "American Horror Story", source: "american-horror-story.jpg"},
@@ -175,7 +180,7 @@ function createArray() {
 		{show: "House Hunters", source: "house-hunters.jpg"},
 		{show: "Gilmore Girls", source: "gilmore-girls.jpg"},
 		{show: "Downton Abbey", source: "downton-abbey.jpg"},
-		{show: "SpongBob SquarPants", source: "spongebob-squarepants.jpg"},	
+		{show: "SpongeBob SquarePants", source: "spongebob-squarepants.jpg"},	
 		];
 	return listOfShows;
 }
