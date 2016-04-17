@@ -110,7 +110,7 @@ function createArray() {
 
 	var listOfShows = [
 		{show: "Spider-Man: The Animated Series", source: "Spider-Man The Animated Series.jpg"},
-		{show: "Game of Thrones", source: "game of thrones.jpg"},
+		{show: "Game of Thrones", source: "game-of-thrones.jpg"},
 		{show: "Agents of SHIELD", source: "agents-of-shield.jpg"},
 		{show: "Arrow", source: "arrow.jpg"},
 		{show: "MacGyver", source: "macgyver.jpg"},
