@@ -51,7 +51,6 @@ function playGame() {
 	document.getElementById("word").innerHTML = blankWord.join(" ");
 	document.getElementById("guessed").innerHTML = lettersGuessed;
 
-	
 	document.onkeyup = function(event) {
 		
 		var userGuess = String.fromCharCode(event.keyCode).toUpperCase();
