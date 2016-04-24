@@ -36,6 +36,10 @@ function playGame() {
 			blankWord.push(":");
 			compareWord.push(":");
 		}
+		else if(showName[i] == "&"){
+			blankWord.push("&");
+			compareWord.push("&");
+		}
 		else if(showName[i] == "-"){
 			blankWord.push("-");
 			compareWord.push("-");
