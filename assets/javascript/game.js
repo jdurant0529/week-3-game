@@ -1,7 +1,6 @@
   var wins=0;
-  document.onkeyup = function(event) {
-    
-    
+  
+  document.onkeyup = function(event) {  
     playGame();
   }
 
@@ -182,7 +181,7 @@ function createArray() {
 		{show: "The Young and the Restless", source: "young-and-restless.jpg"},
 		{show: "CSI: Miami", source: "csi-miami.jpg"},
 		{show: "The Amazing Race", source: "the-amazing-race.jpg"},
-		{show: "2 Broke Girls", source: "2-broke-girls.jpg"},
+		{show: "Two Broke Girls", source: "2-broke-girls.jpg"},
 		{show: "Sex and the City", source: "sex-and-the-city.jpg"},
 		{show: "House Hunters", source: "house-hunters.jpg"},
 		{show: "Gilmore Girls", source: "gilmore-girls.jpg"},
